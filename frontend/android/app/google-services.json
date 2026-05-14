@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487835997023",
+    "project_id": "to-do-fe340",
+    "storage_bucket": "to-do-fe340.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487835997023:android:7b5b925a5e4809c4c7dcea",
+        "android_client_info": {
+          "package_name": "com.joaom.todoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtZENwcL8__TJ5mJax0iPVBerxV3DlsIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
