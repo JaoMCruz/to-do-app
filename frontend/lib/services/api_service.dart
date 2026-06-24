@@ -19,21 +19,23 @@ class ApiService {
   }
 
 
-  static Future<void> addTask(String title, String description) async {
-    final user = FirebaseAuth.instance.currentUser;
+static Future<void> addTask(String title, String description) async {
+  final user = FirebaseAuth.instance.currentUser;
 
-    await http.post(
-      Uri.parse("$baseUrl/tasks"),
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        
-        "title": title,
-        "description": description,
-        "status": "A Fazer",
-        "userId": user!.uid,
-      }),
-    );
-  }
+  final response = await http.post(
+    Uri.parse("$baseUrl/tasks"),
+    headers: {"Content-Type": "application/json"},
+    body: jsonEncode({
+      "title": title,
+      "description": description,
+      "status": "A Fazer",
+      "userId": user!.uid,
+    }),
+  );
+
+  print("STATUS ADD: ${response.statusCode}");
+  print("BODY ADD: ${response.body}");
+}
 
   static Future<void> deleteTask(int id) async {
     await http.delete(
